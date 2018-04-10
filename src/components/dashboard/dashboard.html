@@ -1,0 +1,67 @@
+<app-headerauth></app-headerauth>
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+              <li ><a href="#"> <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a ui-sref="dashboard" >My Account</a></li>
+              <li><a ui-sref="leads" >Leads</a></li>
+              <li><a class="cursor:pointer" ng-click="$ctrl.logout()">Logout</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+       
+            </ul>
+            <ul class="nav nav-sidebar">
+         
+            </ul>
+          </div>
+          <div class="col-sm-9 col-md-10  main">
+            <h1 class="page-header">My Account</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                  <form name="updateForm" ng-submit="$ctrl.submitForm(updateForm.$valid)">
+                                <div class="form-group">
+                                        <label for="exampleInputEmail1">Full Name</label>
+                                        <input type="text"  ng-model="$ctrl.full_name" required class="form-control" id="exampleInputEmail1" placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleInputEmail2">Phone Number</label>
+                                        <input type="text" ng-model="$ctrl.phone" required class="form-control" id="exampleInputEmail2" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Email address</label>
+                                  <input type="email" ng-model="$ctrl.email" required class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleInputEmail4">Theme</label>
+                                        <select ng-model="$ctrl.template" required class="form-control">
+                                            <option value="blue">Blue</option>
+                                            <option value="blue">Black</option>
+                                        </select>
+                                </div>
+                              <center>
+                                    <button type="submit" class="btn btn-default">Update Info</button>
+                              </center>
+                              </form> 
+                </div>
+                <div class="col-sm-6">
+                        <form>
+                              
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1">New Desire Password</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword3" placeholder="New Desire Password">
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirm New Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Confirm New Password">
+                                </div>
+                                <center>
+                                        <button type="submit" class="btn btn-default">Update</button>
+                                </center>
+                              </form> 
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  

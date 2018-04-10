@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="container">
+	<center><h1>{{$ctrl.heading}}</h1></center>
+</div>
+<div class="row">
+        <div class="col-sm-1">
+
+        </div>        
+        <div class="col-sm-10">
+                        <form name="registerForm" ng-submit="$ctrl.submitForm(registerForm.$valid)">
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Full Name</label>
+                                                <input type="text" ng-model="$ctrl.full_name" class="form-control" id="exampleInputEmail1" required placeholder="Full Name">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Phone</label>
+                                                <input type="number" ng-model="$ctrl.phone" required class="form-control" id="exampleInputEmail1" placeholder="Phone">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">Email</label>
+                                          <input type="email" ng-model="$ctrl.email" required class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Password</label>
+                                                <input type="text" ng-model="$ctrl.password" required  class="form-control" id="exampleInputEmail1" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Theme</label>
+                                                <select ng-model="$ctrl.template" required class="form-control">
+                                                    <option value="blue">Blue</option>
+                                                    <option value="black">Black</option>
+                                                </select>
+                                        </div>
+                                        <center>
+                                                <button type="submit"  class="btn btn-default">Submit</button>
+                                        </center>
+                                      </form>
+        </div>        
+        <div class="col-sm-1">
+                
+        </div>        
+</div>

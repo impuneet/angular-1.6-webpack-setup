@@ -1,0 +1,25 @@
+.checkbox {
+	& input[type=checkbox] {
+		display: none; // hiding checkbox
+		& + label:before {
+			font-family: 'Glyphicons Halflings';
+			display: inline-block;
+			content: " ";
+			height: $app-checkbox-height;
+			width: $app-checkbox-width;
+			background-color: $app-checkbox-background-color;
+			margin-right: $app-checkbox-right-margin;
+			vertical-align: middle;
+			border-radius: $app-checkbox-border-radius;
+			border: $app-checkbox-border;
+		};
+		&:checked + label:before {
+			content: "\e013";
+			background-color: $application-navbar-color;
+			padding-top: $app-checkbox-checked-padding-top;
+			padding-left: $app-checkbox-checked-padding-left;
+			color: $app-checkbox-checked-color;
+			border: $app-checkbox-checked-border;
+		};
+	};
+};

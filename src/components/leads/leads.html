@@ -1,0 +1,44 @@
+<app-headerauth></app-headerauth>
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+              <li ><a href="#"> <span class="sr-only">(current)</span></a></li>
+              <li><a href="#"></a></li>
+              <li class="active"><a ui-sref="dashboard" >My Account</a></li>
+              <li><a ui-sref="leads" >Leads</a></li>
+              <li><a class="cursor:pointer" ng-click="$ctrl.logout()">Logout</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+       
+            </ul>
+            <ul class="nav nav-sidebar">
+         
+            </ul>
+          </div>
+          <div class="col-sm-9 col-md-10  main">
+            <h1 class="page-header">My Account</h1>
+            <div class="row">
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="lead in $ctrl.leads">
+                            <td ng-click="hello()">{{lead.full_name}}</td>
+                            <td>{{lead.email}}</td>
+                            <td>{{lead.phone}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+  
